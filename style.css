@@ -281,14 +281,16 @@ section .card {
 /*social media*/
 
 .social-media {
-    background-color: #f5f5f5;
+    background-color: #000000;
     padding: 20px;
     text-align: center;
+    height: 150px;
 }
 
 .social-media h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: #f1f1f1;
 }
 
 .social-media ul {
@@ -307,14 +309,15 @@ section .card {
 
 .social-media a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     color: #fff;
     text-align: center;
     line-height: 40px;
     background-color: #000000;
     transition: all 0.3s ease;
+    box-shadow: 1px 2px 1px 2px rgb(0, 0, 0);
 }
 
 .social-media a:hover {
