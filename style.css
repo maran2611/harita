@@ -10,38 +10,8 @@ body {
     background: linear-gradient(45deg, snow, rgb(255, 255, 255), white);
 }
 
-.carousel-item {
-    height: 100vh;
-    min-height: 300px;
-}
 
-.carousel-caption {
-    bottom: 220px;
-}
-
-.carousel-caption h5 {
-    font-size: 45px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
-}
-
-.carousel-caption p {
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-.carousel-caption a {
-    text-transform: uppercase;
-    text-decoration: none;
-    background: darkorange;
-    padding: 10px 30px;
-    display: inline-block;
-    color: #000;
-    margin-top: 15px;
-}
+/*navbar*/
 
 .navbar-nav a {
     font-size: 18px;
@@ -83,6 +53,39 @@ body {
     background: #fff;
 }
 
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption {
+    bottom: 220px;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-caption a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: darkorange;
+    padding: 10px 30px;
+    display: inline-block;
+    color: #000;
+    margin-top: 15px;
+}
+
 .carousel-caption h5 {
     color: #f51b5c;
 }
@@ -97,28 +100,6 @@ body {
 
 #about-title {
     color: #f51b5c;
-}
-
-section h2 {
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    color: #000;
-    font-size: xx-large;
-}
-
-section .card {
-    margin-right: 30px;
-    transition: 0.5s;
-}
-
-.card:hover {
-    cursor: pointer;
-    z-index: 1;
-    margin-top: 2%;
-    opacity: 0.7;
-    background-color: #000;
-    color: aliceblue;
 }
 
 @media only screen and (max-width: 767px) {
@@ -138,8 +119,75 @@ section .card {
     }
 }
 
-.card-title {
-    font-size: medium;
+
+/*works*/
+
+section h2 {
+    text-align: center;
+    margin-bottom: 5%;
+    color: #000000;
+    font-size: xx-large;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    border-radius: 25px;
+}
+
+.panel {
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    cursor: pointer;
+    flex: 0.5;
+    border-radius: 50px;
+    color: #fff;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 24px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+.container a {
+    margin-left: 75%;
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+}
+
+.container .active a {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 
