@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, snow, rgb(255, 255, 255), white);
+    background: linear-gradient(45deg, snow, rgb(255, 254, 254), white);
 }
 
 
@@ -84,7 +84,6 @@ body {
     color: #000;
     margin-top: 15px;
 }
- 
 
 .carousel-caption h5 {
     color: #f51b5c;
@@ -301,12 +300,75 @@ section h2 {
 }
 
 
+/*work gallery*/
+
+.container1 {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    cursor: pointer;
+    flex: 0.5;
+    border-radius: 50px;
+    color: #fff;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 24px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+.container1 a {
+    margin-left: 75%;
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+}
+
+.container1 .active a {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+
 /*contact*/
 
 #contact {
     width: 1000px;
     height: fit-content;
-    margin-top: 200px;
+    margin-top: 5%;
 }
 
 .botn {
